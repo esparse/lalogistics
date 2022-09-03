@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Lalogistics'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_28E16DB6B6084BA39A31C58B757B9633 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26B74D1390C846B7BF9749DCF9366472 }}
           package: .
