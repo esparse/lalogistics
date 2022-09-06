@@ -85,21 +85,34 @@ exports.SendPickupDetails = async(req,res) =>{
               from:"icaet20@nmiet.edu.in",
               to :req.body.SenderEmail ,
               subject :"Sample Pickup",
-              attachments: [{
-                filename: 'unique@kreata',
-                path: "../image/images/hackister_imac.jpg",
-                cid: 'unique@kreata.ee' //same cid value as in the html img src
-            },
-            {
-              filename: 'download_1.png',
-              path: "../image/images/download_1.png",
-              cid: 'download_1.ee' //same cid value as in the html img src
-          },
-          {
-            filename: 'bee.png',
-            path: "../image/images/bee.png",
-            cid: 'bee.png.ee' //same cid value as in the html img src
-          }],
+              attachments :[
+                {
+                    filename: 'mainlogo.jpg',
+                    path:"../image/SenderImages/mainlogo.jpg",
+                    cid:'mainlogo.ee'
+                },
+                {
+                    filename:'calender.png',
+                    Path :"../image/SenderImages/calender.png",
+                    cid:'calender.ee'
+                },
+                {
+                    filename:'facebook2x.png',
+                    Path :"../image/SenderImages/facebook2x.png",
+                    cid:'facebook2x.ee'
+                },
+                {
+                    filename:'twitter2x.png',
+                    Path :"../image/SenderImages/twitter2x.png",
+                    cid:'twitter2x.ee'
+                },
+                {
+                    filename:'instagram2x.png',
+                    Path :"../image/SenderImages/instagram2x.png",
+                    cid:'instagram2x.ee'
+                },
+
+              ],
               html:`<!DOCTYPE html>
 
               <html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
@@ -204,7 +217,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img src ="  cid:download_1.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img src="cid:mainlogo.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
               </td>
               </tr>
               </table>
@@ -243,7 +256,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <tbody>
               <tr>
               <td>
-              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('images/MCC_confirmation_ticketdetails_bg.png'); width: 680px;" width="680">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('../SenderImages/space.png'); width: 680px;" width="680">
               <tbody>
               <tr>
               <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
@@ -285,7 +298,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Calendar Icon" class="icon" height="32" src="images/MCC_confirmation_icon_calendar.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Calendar Icon" class="icon" height="32" src="cid:calender.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
               <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">${result[0].Date} at ${result[0].Time}</td>
               </tr>
               </table>
@@ -669,9 +682,9 @@ exports.SendPickupDetails = async(req,res) =>{
               <div class="alignment" style="text-align:center;">
               <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="108px">
               <tr>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="images/facebook2x.png" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src="images/twitter2x.png" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="images/instagram2x.png" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="cid:facebook2x.ee" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src="cid:twitter2x.ee" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="cid:instagram2x.ee" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
               </tr>
               </table>
               </div>
