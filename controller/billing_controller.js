@@ -4,7 +4,7 @@ try {
     const result = await billing.create({
         BillingId: Math.floor((Math.random()*100000)+1),
         CustomerId: req.body.CustomerId,
-        INVOICE:'LALPNO0' + Math.floor((Math.random()*1000)+1),
+        INVOICE :'LALPNO0' + Math.floor((Math.random()*1000)+1),
         InvoiceDate: req.body.InvoiceDate,
         INVOICEDuration: req.body.INVOICEDuration,
         PlaceofSupply: req.body.PlaceofSupply,

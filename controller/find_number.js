@@ -1,6 +1,3 @@
-array = []
-for (let i = 1; i < 100; i++) {
-    let current = 'LALO' + i
- console.log(current);
-    
-}
+
+ let  INVOICE ='LALPNO0' + Math.floor((Math.random()*1000)+1);
+ console.log(INVOICE);
