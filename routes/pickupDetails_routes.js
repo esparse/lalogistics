@@ -2,6 +2,7 @@ const express = require("express")
 
 const {createPickupDetails,getpickageDetailsBydate,getPickupDetails,deletePickupDetails,getpickageDetailsByfield,updatePickupDetails,getpickageDetailsByRequestId,getpickageDetailsByAllocation,getpickageDetailsByAllocated} =require("../controller/pickupDetails_controller")
 const {SendPickupDetails} = require("../controller/SendEmailtoSender")
+const {SendPickupToReciverDetails} = require("../controller/SendEmailToReciverPickup")
 const router = express.Router()
 
 router.route("/createPickupDetails").post(createPickupDetails)
@@ -33,6 +34,9 @@ router.route("/getpickageDetailsByAllocated").get(getpickageDetailsByAllocated)
 // @method => put
 router.route("/SendPickupDetailsToSender").post(SendPickupDetails)
 // @url => http://192.168.43.220:37234/api/v1/SendPickupDetailsToSender
+// @method => post
+router.route("/SendPickupToReciverDetails").post(SendPickupToReciverDetails)
+// @url => http://192.168.43.220:37234/api/v1/SendPickupToReciverDetails
 // @method => post
 
 module.exports = router

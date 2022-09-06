@@ -1,6 +1,6 @@
 const pickupDetails = require("../model/PickupDetails_model")
 const nodemailer = require("nodemailer")
-exports.SendPickupDetails = async(req,res) =>{
+exports.SendPickupToReciverDetails = async(req,res) =>{
         let result = await pickupDetails.aggregate([
           {
               $lookup:{
@@ -68,7 +68,7 @@ exports.SendPickupDetails = async(req,res) =>{
               }
           },
           {
-              $match:{SenderEmail:req.body.SenderEmail}
+              $match:{ReceiverEmail:req.body.ReceiverEmail}
           }
       ])    
         const responseType = {};

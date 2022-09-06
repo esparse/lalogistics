@@ -2623,7 +2623,76 @@
         }
         }
       },
-
+      "/api/v1/SendPickupToReciverDetails": {
+        "post": {
+          "tags": [
+            "PickupDetails"
+          ],
+          "description": "Send Pickup  To Reciver Email",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "id":"",
+              "in":"body",
+              "name":"PickupDetails",
+              "type":"object",
+              "example":{
+                "ReceiverEmail":""
+                
+              }
+            }  
+          ],
+          "responses": {
+            "200": {
+              "description": " get  Pickup Details   by Reciver Email",
+                "in":"body",
+                "schema": {
+                    "$ref": "#/definitions/PickupDetails"
+                  }
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
+      "/api/v1/SendPickupDetailsToSender": {
+        "post": {
+          "tags": [
+            "PickupDetails"
+          ],
+          "description": "Send Pickup Details To Sender",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "id":"",
+              "in":"body",
+              "name":"PickupDetails",
+              "type":"object",
+              "example":{
+                "SenderEmail":""
+                
+              }
+            }  
+          ],
+          "responses": {
+            "200": {
+              "description": " Send Pickup Details To Sender",
+                "in":"body",
+                "schema": {
+                    "$ref": "#/definitions/PickupDetails"
+                  }
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+      },
 
       "/api/v1/createPodDetails": {
         "post": {
