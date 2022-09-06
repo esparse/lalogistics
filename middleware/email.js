@@ -15,7 +15,7 @@ var  transporter = nodemailer.createTransport({
   });
 var mailOption = {
     from:"icaet20@nmiet.edu.in",
-    to : "info@sparsematrix.co.in",
+    to : "narwadegovind1@gmail.com",
     subject :"Pickup Registered",
   
     attachments: [{
