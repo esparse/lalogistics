@@ -9,6 +9,7 @@
     "mongoose": "^6.5.4",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.7.8",
+    "socket.io": "^4.5.2",
     "swagger-ui-express": "^4.5.0"
   },
   "scripts": {
@@ -17,7 +18,6 @@
   "name": "lalogistics",
   "version": "1.0.0",
   "main": "endpoints.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/esparse/lalogistics.git"
