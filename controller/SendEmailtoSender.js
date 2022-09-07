@@ -89,7 +89,7 @@ exports.SendPickupDetails = async(req,res) =>{
                 {
                     filename: 'na_feb_10.jpg',
                     path:"../images/na_feb_10.jpg",
-                    cid:'mainlogo.ee'
+                    cid:'unique@mainlogo.ee'
                 },
                 {
                     filename:'calender.png',
@@ -109,7 +109,7 @@ exports.SendPickupDetails = async(req,res) =>{
                 {
                     filename:'instagram2x.png',
                     Path :"../images/instagram2x.png",
-                    cid:'instagram2x.png.ee'
+                    cid:' instagram2x.png.ee'
                 },
                 {
                     filename:'space.png',
@@ -236,7 +236,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img alt="Hero Image Placeholder" class="big" src="cid:mainlogo.ee" style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img alt="Hero Image Placeholder" class="big" src="cid:unique@mainlogo.ee" style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
               </td>
               </tr>
               </table>
