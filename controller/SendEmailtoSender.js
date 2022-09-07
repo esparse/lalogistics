@@ -87,38 +87,38 @@ exports.SendPickupDetails = async(req,res) =>{
               subject :"Sample Pickup",
               attachments :[
                 {
-                    filename: 'mainlogo.png',
-                    path:"../SenderImages/mainlogo.png",
+                    filename: 'na_feb_10.jpg',
+                    path:" ../SenderImages/images/na_feb_10.jpg",
                     cid:'mainlogo.ee'
                 },
                 {
                     filename:'calender.png',
-                    Path :"../SenderImages/calender.png",
+                    Path :"../SenderImages/images/MCC_confirmation_icon_calendar.png",
                     cid:'calender.png.ee'
                 },
                 {
                     filename:'facebook2x.png',
-                    Path :"../SenderImages/facebook2x.png",
+                    Path :"../SenderImages/images/facebook2x.png",
                     cid:'facebook2x.png.ee'
                 },
                 {
                     filename:'twitter2x.png',
-                    Path :"../SenderImages/twitter2x.png",
+                    Path :"../SenderImages/images/twitter2x.png",
                     cid:'twitter2x.png.ee'
                 },
                 {
                     filename:'instagram2x.png',
-                    Path :"../SenderImages/instagram2x.png",
+                    Path :"../SenderImages/images/instagram2x.png",
                     cid:'instagram2x.png.ee'
                 },
                 {
                     filename:'space.png',
-                    Path :"../SenderImages/space.png",
+                    Path :"../SenderImages/images/MCC_confirmation_additionalinformation_bg.png",
                     cid:'space.png.ee'
                 },
                 {
                     filename:'esparelogo.jpg',
-                    Path :"../SenderImages/esparelogo.jpg",
+                    Path :"../SenderImages/images/1620055251347.jpg",
                     cid:'esparelogo.jpg.ee'
                 },
               ],
