@@ -1,6 +1,5 @@
 const pickupDetails = require("../model/PickupDetails_model")
 const nodemailer = require("nodemailer")
-
 exports.SendPickupDetails = async(req,res) =>{
         let result = await pickupDetails.aggregate([
           {
@@ -87,31 +86,40 @@ exports.SendPickupDetails = async(req,res) =>{
               subject :"Sample Pickup",
               attachments :[
                 {
-                    filename: 'mainlogo.jpg',
-                    path:"../image/SenderImages/mainlogo.jpg",
-                    cid:'mainlogo.ee'
+                    filename: 'mainlogo.png',
+                    path:"../image/SenderImages/mainlogo.png",
+                    cid:'mainlogo.png.ee'
                 },
                 {
                     filename:'calender.png',
                     Path :"../image/SenderImages/calender.png",
-                    cid:'calender.ee'
+                    cid:'calender.png.ee'
                 },
                 {
                     filename:'facebook2x.png',
                     Path :"../image/SenderImages/facebook2x.png",
-                    cid:'facebook2x.ee'
+                    cid:'facebook2x.png.ee'
                 },
                 {
                     filename:'twitter2x.png',
                     Path :"../image/SenderImages/twitter2x.png",
-                    cid:'twitter2x.ee'
+                    cid:'twitter2x.png.ee'
                 },
                 {
                     filename:'instagram2x.png',
                     Path :"../image/SenderImages/instagram2x.png",
-                    cid:'instagram2x.ee'
+                    cid:'instagram2x.png.ee'
                 },
-
+                {
+                    filename:'space.png',
+                    Path :"../image/SenderImages/space.png",
+                    cid:'space.png.ee'
+                },
+                {
+                    filename:'esparelogo.jpg',
+                    Path :"/SenderImages/esparelogo.jpg",
+                    cid:'esparelogo.jpg.ee'
+                },
               ],
               html:`<!DOCTYPE html>
 
@@ -217,7 +225,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img src="cid:mainlogo.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img src="cid:mainlogo.png.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
               </td>
               </tr>
               </table>
@@ -672,7 +680,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img alt="Your Logo Placeholder" src="images/1620055251347.jpg" style="display: block; height: auto; border: 0; width: 136px; max-width: 100%;" title="Your Logo Placeholder" width="136"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img alt="Your Logo Placeholder" src="cid:esparelogo.jpg.ee" style="display: block; height: auto; border: 0; width: 136px; max-width: 100%;" title="Your Logo Placeholder" width="136"/></div>
               </td>
               </tr>
               </table>
@@ -682,9 +690,9 @@ exports.SendPickupDetails = async(req,res) =>{
               <div class="alignment" style="text-align:center;">
               <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="108px">
               <tr>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="cid:facebook2x.ee" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src="cid:twitter2x.ee" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="cid:instagram2x.ee" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="cid:facebook2x.png.ee" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src="cid:twitter2x.png.ee" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="cid:instagram2x.png.ee" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
               </tr>
               </table>
               </div>

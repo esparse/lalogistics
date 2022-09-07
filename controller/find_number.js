@@ -1,10 +1,3 @@
-
-attachments =[
-    {
-        filename: 'mainlogo.jpg',
-        path: "../SenderImages/mainlogo.jpg",
-        cid: 'mainlogo.ee'
-    },
-    
-  ],
-  console.log(attachments);
+const path = require("path")
+file = path.join(__dirname,"../image/SenderImages/mainlogo.jpg")
+console.log(file);
