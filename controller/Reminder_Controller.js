@@ -219,7 +219,7 @@ exports.SendReminder = async(req,res) =>{
 <li style="margin-bottom: 5px;"><strong>INVOICE NUMBER :     ${data[0].INVOICE}</strong></li>
 <li style="margin-bottom: 5px;"><strong>INVOICE DATE       :     ${data[0].InvoiceDate}</strong></li>
 <li style="margin-bottom: 5px;"><strong>INVOICE AMOUNT :   ${data[0].totalAmount} </strong></li>
-<li><strong>NO. OF PARTICULAR:    ${data[0].BillingItem[0].count}</strong></li>
+<li><strong>Name. OF PARTICULAR:    ${data[0].BillingItem[0].Particular}</strong></li>
 </ul>
 </td>
 </tr>
