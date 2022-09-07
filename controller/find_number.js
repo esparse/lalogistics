@@ -1,3 +1,3 @@
-const path = require("path")
-file = path.join(__dirname,"../image/SenderImages/mainlogo.jpg")
+const fs = require("fs")
+const file = fs.readFileSync("../image/SenderImages/mainlogo.png")
 console.log(file);

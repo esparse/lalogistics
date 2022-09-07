@@ -1,5 +1,6 @@
 const pickupDetails = require("../model/PickupDetails_model")
 const nodemailer = require("nodemailer")
+const fs = require("fs")
 exports.SendPickupDetails = async(req,res) =>{
         let result = await pickupDetails.aggregate([
           {
