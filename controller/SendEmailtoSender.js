@@ -88,37 +88,37 @@ exports.SendPickupDetails = async(req,res) =>{
               attachments :[
                 {
                     filename: 'mainlogo.png',
-                    path:"../image/SenderImages/mainlogo.png",
+                    path:"../SenderImages/mainlogo.png",
                     cid:'mainlogo.ee'
                 },
                 {
                     filename:'calender.png',
-                    Path :"../image/SenderImages/calender.png",
+                    Path :"../SenderImages/calender.png",
                     cid:'calender.png.ee'
                 },
                 {
                     filename:'facebook2x.png',
-                    Path :"../image/SenderImages/facebook2x.png",
+                    Path :"../SenderImages/facebook2x.png",
                     cid:'facebook2x.png.ee'
                 },
                 {
                     filename:'twitter2x.png',
-                    Path :"../image/SenderImages/twitter2x.png",
+                    Path :"../SenderImages/twitter2x.png",
                     cid:'twitter2x.png.ee'
                 },
                 {
                     filename:'instagram2x.png',
-                    Path :"../image/SenderImages/instagram2x.png",
+                    Path :"../SenderImages/instagram2x.png",
                     cid:'instagram2x.png.ee'
                 },
                 {
                     filename:'space.png',
-                    Path :"../image/SenderImages/space.png",
+                    Path :"../SenderImages/space.png",
                     cid:'space.png.ee'
                 },
                 {
                     filename:'esparelogo.jpg',
-                    Path :"/SenderImages/esparelogo.jpg",
+                    Path :"../SenderImages/esparelogo.jpg",
                     cid:'esparelogo.jpg.ee'
                 },
               ],
