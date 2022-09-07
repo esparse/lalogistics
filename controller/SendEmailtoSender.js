@@ -89,7 +89,7 @@ exports.SendPickupDetails = async(req,res) =>{
                 {
                     filename: 'mainlogo.png',
                     path:"../image/SenderImages/mainlogo.png",
-                    cid:'mainlogo.png.ee'
+                    cid:'mainlogo.ee'
                 },
                 {
                     filename:'calender.png',
@@ -226,7 +226,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img src="cid:mainlogo.png.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img src="cid:mainlogo.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
               </td>
               </tr>
               </table>
