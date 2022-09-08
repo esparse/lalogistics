@@ -39,13 +39,13 @@ exports.SendReminder = async(req,res) =>{
               attachments: [
                 {
                 filename: 'logo.png',
-                // path: "../images/logo.png",
-                cid:'logo.ee' //same cid value as in the html img src
+                path: "../images/logo.png",
+                cid:'logo.png.ee' //same cid value as in the html img src
             },
             {
               filename: '4180847.jpg',
-              // path: "../images/4180847.jpg ",
-              cid:'unique@yourImage.ee'//same cid value as in the html img src
+              path: "../images/4180847.jpg ",
+              cid:'4180847.jpg.ee'//same cid value as in the html img src
           },
           ],
               html:`
@@ -139,7 +139,7 @@ exports.SendReminder = async(req,res) =>{
 <tbody>
 <tr>
 <td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d4eaf9; background-image: url('cid:4180847.ee'); background-position: top center; background-repeat: no-repeat;" width="100%">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d4eaf9; background-image: url('cid:4180847.jpg.ee'); background-position: top center; background-repeat: no-repeat;" width="100%">
 <tbody>
 <tr>
 <td>
@@ -150,7 +150,7 @@ exports.SendReminder = async(req,res) =>{
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img src="cid:unique@yourImage.ee'" style="display: block; height: auto; border: 0; width: 131px; max-width: 100%;" width="131"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img src="cid:logo.png.ee" style="display: block; height: auto; border: 0; width: 131px; max-width: 100%;" width="131"/></div>
 </td>
 </tr>
 </table>

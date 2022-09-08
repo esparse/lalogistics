@@ -84,6 +84,8 @@ exports.SendPickupToReciverDetails = async(req,res) =>{
               from:"icaet20@nmiet.edu.in",
               to :req.body.SenderEmail ,
               subject :"Sample Pickup",
+
+   
               html:`<!DOCTYPE html>
 
               <html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
