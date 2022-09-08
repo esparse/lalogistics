@@ -89,7 +89,7 @@ exports.SendPickupDetails = async(req,res) =>{
               attachments: [
                 {
                 filename: 'unique@kreata',
-                path: __dirname +'/images/na_feb_10.jpg',
+                path: '../images/na_feb_10.jpg',
                 cid: 'unique@kreata.ee' //same cid value as in the html img src
             },
             {
