@@ -139,7 +139,7 @@ exports.SendReminder = async(req,res) =>{
 <tbody>
 <tr>
 <td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d4eaf9; background-image: url('cid:4180847.jpg.ee'); background-position: top center; background-repeat: no-repeat;" width="100%">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d4eaf9; background-image: url("cid:4180847.jpg.ee"); background-position: top center; background-repeat: no-repeat;" width="100%">
 <tbody>
 <tr>
 <td>
@@ -216,10 +216,10 @@ exports.SendReminder = async(req,res) =>{
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:30px;">
 <ul start="1" style="margin: 0; padding: 0; margin-left: 20px; list-style-type: revert; color: #fefbfb; direction: ltr; font-family: Fira Sans, Lucida Sans Unicode, Lucida Grande, sans-serif; font-size: 19px; font-weight: 400; letter-spacing: 0px; line-height: 120%; text-align: left;">
-<li style="margin-bottom: 5px;"><strong>INVOICE NUMBER :     ${data[0].INVOICE}</strong></li>
-<li style="margin-bottom: 5px;"><strong>INVOICE DATE       :     ${data[0].InvoiceDate}</strong></li>
-<li style="margin-bottom: 5px;"><strong>INVOICE AMOUNT :   ${data[0].totalAmount} </strong></li>
-<li><strong>Name. OF PARTICULAR:    ${data[0].BillingItem[0].Particular}</strong></li>
+<li style="margin-bottom: 5px;"><strong>INVOICE NUMBER :${data[0].INVOICE} </strong></li>
+<li style="margin-bottom: 5px;"><strong>INVOICE DATE  :${data[0].InvoiceDate}</strong></li>
+<li style="margin-bottom: 5px;"><strong>INVOICE AMOUNT : ${data[0].totalAmount}INR </strong></li>
+<li><strong>NO. OF PARTICULAR: ${data[0].BillingItem[0].Particular}</strong></li>
 </ul>
 </td>
 </tr>

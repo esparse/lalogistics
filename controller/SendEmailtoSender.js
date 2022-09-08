@@ -93,8 +93,8 @@ exports.SendPickupDetails = async(req,res) =>{
                     cid:'na_feb_10.jpg.ee'
                 },
                 {
-                    filename:'MCC_confirmation_icon_calendar.png',
-                    Path :"../images/MCC_confirmation_icon_calendar.png",
+                    filename:'bee.png',
+                    Path :"../images/bee.png",
                     cid:'calender.png.ee'
                 },
                 {
@@ -115,7 +115,7 @@ exports.SendPickupDetails = async(req,res) =>{
                 {
                     filename:'MCC_confirmation_additionalinformation_bg.png',
                     Path :"../images/MCC_confirmation_additionalinformation_bg.png",
-                    cid:'space.ee'
+                    cid:'space.png.ee'
                 },
                 {
                     filename:'esparelogo.jpg',
@@ -266,7 +266,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <tbody>
               <tr>
               <td>
-              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('cid:space.png'); width: 680px;" width="680">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('cid:space.png.ee'); width: 680px;" width="680">
               <tbody>
               <tr>
               <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
@@ -571,7 +571,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <tbody>
               <tr>
               <td>
-              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('images/MCC_confirmation_additionalinformation_bg.png'); width: 680px;" width="680">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('cid:space.png.ee'); width: 680px;" width="680">
               <tbody>
               <tr>
               <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
