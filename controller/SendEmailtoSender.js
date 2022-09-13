@@ -2,6 +2,7 @@ const pickupDetails = require("../model/PickupDetails_model")
 const nodemailer = require("nodemailer")
 const fs = require("fs")
 const os = require("os")
+const path = require("path")
 exports.SendPickupDetails = async(req,res) =>{
         let result = await pickupDetails.aggregate([
           {
@@ -86,65 +87,7 @@ exports.SendPickupDetails = async(req,res) =>{
               from:"icaet20@nmiet.edu.in",
               to :req.body.SenderEmail ,
               subject :"Sample Pickup",
-              attachments: [
-                {
-                filename: 'unique@kreata',
-                path: '../images/na_feb_10.jpg',
-                cid: 'unique@kreata.ee' //same cid value as in the html img src
-            },
-            {
-              filename: 'MCC_confirmation_icon_location.png',
-              path: "../images/MCC_confirmation_icon_location.png",
-              cid: 'MCC_confirmation_icon_location.png.ee' //same cid value as in the html img src
-          },
-          {
-            filename: 'facebook2x.png',
-            path: "../images/facebook2x.png",
-            cid: 'facebook2x.ee' //same cid value as in the html img src
-          },
-          {
-            filename: 'twitter2x.png',
-            path: "../images/twitter2x.png",
-            cid:'twitter2x.ee'
-          },
-          {
-            filename: 'instagram2x.png',
-            path: "../images/instagram2x.png",
-            cid:'instagram2x.ee'
-          },
-          {
-            filename: '1620055251347.jpg',
-            path: "../images/1620055251347.jpg",
-            cid:'1620055251347.ee'
-          },
-          {
-            filename: 'MCC_confirmation_additionalinformation_bg.png',
-            path: "../images/MCC_confirmation_additionalinformation_bg.png",
-            cid:'MCC_confirmation_additionalinformation_bg.png.ee'
-          },
-          {
-            filename: 'MCC_confirmation_icon_calendar.png',
-            path: "../images/MCC_confirmation_icon_calendar.png",
-            cid:'MCC_confirmation_icon_calendar.png.ee'
-          },
-          
-          {
-            filename: 'bee.png',
-            path: "../image/images/bee.png",
-            cid: 'bee.png.ee' //same cid value as in the html img src
-          },
-          {
-            filename: 'MCC_confirmation_icon_logo.png',
-            path: "../images/MCC_confirmation_icon_logo.png",
-            cid: 'MCC_confirmation_icon_logo.png.ee' //same cid value as in the html img src
-          },
-          {
-            filename: 'MCC_confirmation_icon_tickets.png',
-            path: "../images/MCC_confirmation_icon_tickets.png",
-            cid: 'MCC_confirmation_icon_tickets.png.ee' //same cid value as in the html img src
-          },
-          
-          ],
+            
            
               html :` 
               <!DOCTYPE html>
@@ -251,7 +194,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img src="cid:unique@kreata.ee"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/na_feb_10.jpg"  alt="Hero Image Placeholder" class="big"  style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;" title="Hero Image Placeholder" width="680"/></div>
               </td>
               </tr>
               </table>
@@ -271,8 +214,8 @@ exports.SendPickupDetails = async(req,res) =>{
               <td class="pad" style="padding-bottom:60px;padding-left:25px;padding-right:25px;padding-top:40px;">
               <div style="font-family: sans-serif">
               <div class="" style="font-size: 12px; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Hi Govind},<br/><br/></span></p>
-              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Thanks for your Pickup request - your pickup request  number is 7894.</span><br/><span style="font-size:16px;">Full details of your order can be found below.<br/></span><br/><span style="font-size:16px;"><em>Please note this email cannot be used for entry.</em></span></p>
+              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Hi ${result[0].Customer[0].CustomerName}<br/><br/></span></p>
+              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Thanks for your Pickup request - your pickup request  number is ${result[0].RequestedId}.</span><br/><span style="font-size:16px;">Full details of your order can be found below.<br/></span><br/><span style="font-size:16px;"><em>Please note this email cannot be used for entry.</em></span></p>
               </div>
               </div>
               </td>
@@ -290,7 +233,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <tbody>
               <tr>
               <td>
-              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url("cid:MCC_confirmation_icon_calendar.png.ee"); width: 680px;" width="680">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url(https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_additionalinformation_bg.png); width: 680px;" width="680">
               <tbody>
               <tr>
               <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
@@ -332,8 +275,9 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Calendar Icon" class="icon" height="32" src="cid:MCC_confirmation_icon_calendar.png.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
-              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">07-09-2022 at 18:06</td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Calendar Icon" class="icon" height="32" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_icon_calendar.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
+              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">
+              ${result[0].Date} at   ${result[0].Time}</td>
               </tr>
               </table>
               </td>
@@ -353,8 +297,11 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Location Icon" class="icon" height="32" src=" cid:MCC_confirmation_icon_location.png.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
-              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">Aurangabad</td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Location Icon" class="icon" height="32" src=" 
+              https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_icon_location.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
+              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">${
+                result[0].Customer[0].BillingAddress
+              }</td>
               </tr>
               </table>
               </td>
@@ -374,8 +321,10 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Ticket Icon" class="icon" height="32" src="cid:MCC_confirmation_icon_tickets.png.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
-              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">NO OF PARTICULAR</td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="Ticket Icon" class="icon" height="32" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_icon_tickets.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
+              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">
+              ${result[0].contents[0].ContentName}
+              </td>
               </tr>
               </table>
               <!--[if vml]><table align="left" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><![endif]-->
@@ -383,8 +332,10 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="App Icon" class="icon" height="32" src="cid:MCC_confirmation_icon_logo.png.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
-              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">Mobile Number</td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 25px; padding-right: 25px;"><img align="center" alt="App Icon" class="icon" height="32" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_icon_logo.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="32"/></td>
+              <td style="font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 16px; color: #ffffff; vertical-align: middle; letter-spacing: undefined; text-align: left;">
+              ${result[0].Customer[0].Mobile}
+              </td>
               </tr>
               </table>
               </td>
@@ -539,7 +490,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <div align="center" class="alignment">
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
-              <td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 1px solid #3DE6E8;"><span>7666001046</span></td>
+              <td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 1px solid #3DE6E8;"><span></span></td>
               </tr>
               </table>
               </div>
@@ -595,7 +546,8 @@ exports.SendPickupDetails = async(req,res) =>{
               <tbody>
               <tr>
               <td>
-              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url('cid:space.png.ee'); width: 680px;" width="680">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-position: center top; background-repeat: no-repeat; color: #000000; background-color: #000000; background-image: url(https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/MCC_confirmation_additionalinformation_bg.png
+              ); width: 680px;" width="680">
               <tbody>
               <tr>
               <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
@@ -706,7 +658,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
               <tr>
               <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-              <div align="center" class="alignment" style="line-height:10px"><img alt="Your Logo Placeholder" src="cid:1620055251347.ee" style="display: block; height: auto; border: 0; width: 136px; max-width: 100%;" title="Your Logo Placeholder" width="136"/></div>
+              <div align="center" class="alignment" style="line-height:10px"><img alt="Your Logo Placeholder" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/1620055251347.jpg" style="display: block; height: auto; border: 0; width: 136px; max-width: 100%;" title="Your Logo Placeholder" width="136"/></div>
               </td>
               </tr>
               </table>
@@ -716,9 +668,12 @@ exports.SendPickupDetails = async(req,res) =>{
               <div class="alignment" style="text-align:center;">
               <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="108px">
               <tr>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="cid:facebook2x.ee" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src="cid:twitter2x.ee" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
-              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="cid:instagram2x.ee" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Facebook" height="32" src="
+              https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/facebook2x.png
+              " style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Twitter" height="32" src=" https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
+              <td style="padding:0 2px 0 2px;"><a href="https://www.example.com" target="_blank"><img alt="Instagram" height="32" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/instagram2x.png
+              " style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
               </tr>
               </table>
               </div>
@@ -774,7 +729,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
               <!--<![endif]-->
               <tr>
-              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/" style="text-decoration: none;" target="_blank"><img align="center" alt="Designed with BEE" class="icon" height="32" src="cid:bee.png.ee" style="display: block; height: auto; margin: 0 auto; border: 0;" width="34"/></a></td>
+              <td style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"><a href="https://www.designedwithbee.com/" style="text-decoration: none;" target="_blank"><img align="center" alt="Designed with BEE" class="icon" height="32" src="https://lafrontendadmin.azurewebsites.net/logisticsportal/assets/images/bee.png" style="display: block; height: auto; margin: 0 auto; border: 0;" width="34"/></a></td>
               <td style="font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined; text-align: center;"><a href="https://www.designedwithbee.com/" style="color: #9d9d9d; text-decoration: none;" target="_blank">Designed with BEE</a></td>
               </tr>
               </table>
