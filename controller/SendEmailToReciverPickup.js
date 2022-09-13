@@ -82,7 +82,7 @@ exports.SendPickupToReciverDetails = async(req,res) =>{
             });
           var mailOption = {
               from:"icaet20@nmiet.edu.in",
-              to :req.body.SenderEmail ,
+              to :req.body.ReceiverEmail ,
               subject :"Sample Pickup",
 
    
