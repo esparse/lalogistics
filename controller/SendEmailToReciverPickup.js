@@ -403,7 +403,7 @@ ${result[0].Customer[0].Mobile}
               <td class="pad" style="padding-bottom:10px;padding-left:25px;padding-right:25px;">
               <div style="font-family: sans-serif">
               <div class="" style="font-size: 12px; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">Regular</span></strong></p>
+              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">${result[0].contents[0].ContentName}</span></strong></p>
               </div>
               </div>
               </td>
@@ -427,7 +427,7 @@ ${result[0].Customer[0].Mobile}
               <td class="pad" style="padding-bottom:10px;padding-left:25px;padding-right:25px;">
               <div style="font-family: sans-serif">
               <div class="" style="font-size: 12px; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">107 | 205, 206</span></strong></p>
+              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">${result[0].PackageDetails[0].AMB} | ${result[0].PackageDetails[0].REF} | ${result[0].PackageDetails[0].FRZ}</span></strong></p>
               </div>
               </div>
               </td>
@@ -451,7 +451,7 @@ ${result[0].Customer[0].Mobile}
               <td class="pad" style="padding-bottom:10px;padding-left:25px;padding-right:25px;">
               <div style="font-family: sans-serif">
               <div class="" style="font-size: 12px; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">2</span></strong></p>
+              <p style="margin: 0; mso-line-height-alt: 18px;"><strong><span style="font-size:16px;">1</span></strong></p>
               </div>
               </div>
               </td>
