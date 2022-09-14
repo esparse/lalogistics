@@ -214,7 +214,7 @@ exports.SendPickupDetails = async(req,res) =>{
               <td class="pad" style="padding-bottom:60px;padding-left:25px;padding-right:25px;padding-top:40px;">
               <div style="font-family: sans-serif">
               <div class="" style="font-size: 12px; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Hi ${result[0].Customer[0].CustomerName}<br/><br/></span></p>
+              <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Hi ${result[0].Customer[0].Consignee}<br/><br/></span></p>
               <p style="margin: 0; mso-line-height-alt: 24px;"><span style="font-size:16px;">Thanks for your Pickup request - your pickup request  number is ${result[0].RequestedId}.</span><br/><span style="font-size:16px;">Full details of your order can be found below.<br/></span><br/><span style="font-size:16px;"><em>Please note this email cannot be used for entry.</em></span></p>
               </div>
               </div>

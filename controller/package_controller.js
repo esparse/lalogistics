@@ -54,7 +54,7 @@ exports.createPackageDetails=async (req,res)=>{
         exports.deletepackageDetails= async(req,res)=>{
             const{RequestedId} =req.body
             try {
-               const result = await packageDetails.deleteMany({RequestedId:req.params.RequestedId})
+               const result = await packageDetails.findOneAndDelete({RequestedId:req.params.RequestedId})
                res.json({
                 success:true,
                 message:"Delete  packageDetails Details By Requested",
