@@ -1,5 +1,5 @@
 const express = require("express")
-const{getHSNcodeDetails}=require("../controller/HSNCode_controller")
+const{getHSNcodeDetails,deleteHSNcodeDetails}=require("../controller/HSNCode_controller")
 const router = express.Router()
 
 router.route("/getHSNcodeDetails").get(getHSNcodeDetails)
