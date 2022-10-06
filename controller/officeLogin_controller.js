@@ -3,13 +3,13 @@ brycpt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const officeLogin = async(req,res) =>{
     try {
-     const {Email,Password} = req.body
+     const {Email,Password,BranchId} = req.body
      const result = await office.findOne({Email}) 
-     
-     if(!result){
+     const result1 = await office.findOne({BranchId})
+     if(!result && !result1){
          return res.json({
              success:false,
-             message:"Plese enter your correct email",
+             message:"Plese enter your correct email or BranchId",
              data:null
  
          })
