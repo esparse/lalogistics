@@ -40,6 +40,17 @@ const officeSchema = mongoose.Schema({
         type:Boolean,
         default:false
     },
+    DeliveryBoyId:{
+        type:Number,
+        
+    },
+    DRSId:{
+        type:Number,
+        
+    },
+    MenifestId:{
+        type:Number,
+       },
 },{
 timestamps:true
 })

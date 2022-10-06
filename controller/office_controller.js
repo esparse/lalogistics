@@ -16,6 +16,10 @@ exports.createOfficeAdmin = async(req,res)=>{
             GroupId:req.body.GroupId,
             StateId:req.body.StateId,
             Cityid:req.body.Cityid,
+            DeliveryBoyId: req.body.DeliveryBoyId,
+            DRSId: req.body.DRSId,
+            MenifestId: req.body.MenifestId,
+            
             
         })
         console.log(result);
@@ -61,7 +65,37 @@ exports.getOfficeAdmin = async(req,res)=>{
                         as:"State"
                     }
                 
+            },
+            {
+                
+                $lookup:{
+                    from:'drsdetails',
+                    localField:'DRSId',
+                    foreignField:'DRSId',
+                    as:"DRSDetails"
+                }
+            
+        },
+        {
+                
+            $lookup:{
+                from:'deliveryboys',
+                localField:'DeliveryBoyId',
+                foreignField:'DeliveryBoyId',
+                as:"DeliveryBoy"
             }
+        
+    },
+    {
+                
+        $lookup:{
+            from:'menifestdetails',
+            localField:'MenifestId',
+            foreignField:'MenifestId',
+            as:"Menifest"
+        }
+    
+}
         ])
         res.json({
             count:result.length,

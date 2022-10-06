@@ -46,6 +46,7 @@ const billingbyDocket= require("./routes/BillingbyDocketMapping_routes")
 const Report = require("./routes/Reports_routes")
 const contact = require("./routes/contactus_routes")
 const officeLogin = require("./routes/officeLogin_Routes")
+const DeliveryBoyAllocation = require("./routes/DeliveryBoyAllocation_routes")
 
 db()
 app.use(express.json())
@@ -91,6 +92,7 @@ app.use('/api/v1',billingbyDocket)
 app.use('/api/v1',Report)
 app.use('/api/v1',contact)
 app.use('/api/v1',officeLogin)
+app.use('/api/v1',DeliveryBoyAllocation)
 
 app.use('/swagger-api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // swagger api http://192.168.43.220:37234/swagger-api-doc/
