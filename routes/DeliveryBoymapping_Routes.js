@@ -7,7 +7,7 @@ router.route("/CreateDeliveryBoyMappingDetails").post(CreateDeliveryBoyMappingDe
 router.route("/getDeliveryBoyMapping").get(getDeliveryBoyMapping)
 // route http://192.168.43.220:5000/api/v1/getDeliveryBoyMapping
 //method get
-router.route("/deleteDeliveryBoyMappingDetails/:DeliveryBoyId").delete(deleteDeliveryBoyMappingDetails)
+router.route("/deleteDeliveryBoyMappingDetails/:DeliveryBoyMappingId").delete(deleteDeliveryBoyMappingDetails)
 // route http://192.168.43.220:5000/api/v1/deleteDeliveryBoyMappingDetails
 //method delete
 router.route("/updateDeliveryBoyMappingDetails").put(updateDeliveryBoyMappingDetails)
