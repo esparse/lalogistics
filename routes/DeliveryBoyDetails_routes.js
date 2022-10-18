@@ -1,5 +1,6 @@
 const express = require("express")
 const{CreateDeliveryBoyDetails,getDeliveryBoyDetails,deleteDeliveryBoyDetails,updateDeliveryBoyDetails,getSingleDeliveryBoyDetails}=require("../controller/DeliveryBoyDetails_controlller")
+const {SendNotificationToDeliveryBoy} = require("../controller/SendNotificationToDeliveryBoy")
 const router = express.Router()
 const upload =require("../middleware/uploads_middleware")
 router.route("/CreateDeliveryBoyDetails").post(upload.single('file'),CreateDeliveryBoyDetails )
@@ -16,6 +17,9 @@ router.route("/updateDeliveryBoyDetails").put(updateDeliveryBoyDetails)
 //method put
 router.route("/getSingleDeliveryBoyDetails").post(getSingleDeliveryBoyDetails)
 // route http://192.168.43.220:5000/api/v1/getSingleDeliveryBoyDetails
+//method get
+router.route("/SendNotificationToDeliveryBoy").post(SendNotificationToDeliveryBoy)
+// route http://192.168.43.220:5000/api/v1/SendNotificationToDeliveryBoy
 //method get
 
 module.exports = router

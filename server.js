@@ -48,6 +48,7 @@ const contact = require("./routes/contactus_routes")
 const officeLogin = require("./routes/officeLogin_Routes")
 const DeliveryBoyAllocation = require("./routes/DeliveryBoyAllocation_routes")
 const DeliveryBoyMapping = require("./routes/DeliveryBoymapping_Routes")
+const reminder = require("./routes/reminder_routes")
 
 db()
 app.use(express.json())
@@ -95,6 +96,7 @@ app.use('/api/v1',contact)
 app.use('/api/v1',officeLogin)
 app.use('/api/v1',DeliveryBoyAllocation)
 app.use('/api/v1',DeliveryBoyMapping)
+app.use('/api/v1',reminder)
 
 app.use('/swagger-api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // swagger api http://192.168.43.220:37234/swagger-api-doc/
