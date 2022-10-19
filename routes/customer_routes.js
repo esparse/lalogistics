@@ -17,8 +17,6 @@ router.route("/updateCustomer").put(updateCustomer)
 router.route("/getSingleCustomer").post(getSingleCustomer)
 // route http://192.168.43.220:5000/api/v1/customer/getSingleCustomer
 //method put
-router.route("/SendReminder").post(SendReminder)
-// route http://192.168.43.220:5000/api/v1/customer/SendReminder
-//method put
+
 
 module.exports = router 
