@@ -1,7 +1,8 @@
 const pickupDetails = require("../model/PickupDetails_model")
 const nodemailer = require("nodemailer")
-exports.SendPickupToReciverDetails = async(req,res) =>{
-        let result = await pickupDetails.aggregate([
+exports.SendPickupToReciverDetails = async(req,res,Email) =>{
+    // const resEmail= await pickupDetails.find({Email})
+        const result = await pickupDetails.aggregate([
           {
               $lookup:{
                   from:'contents',
@@ -68,11 +69,13 @@ exports.SendPickupToReciverDetails = async(req,res) =>{
               }
           },
           {
-              $match:{ReceiverEmail:req.body.ReceiverEmail}
+              $match:{ReceiverEmail:Email}
           }
-      ])    
+      ])  
+    //   console.log(resEmail);  
         const responseType = {};
         if(result){
+            
             var  transporter = nodemailer.createTransport({
               service: "gmail",
               auth: {
@@ -82,10 +85,8 @@ exports.SendPickupToReciverDetails = async(req,res) =>{
             });
           var mailOption = {
               from:"icaet20@nmiet.edu.in",
-              to :req.body.ReceiverEmail ,
+              to :"narwadegovind1@gmail.com" ,
               subject :"Sample Pickup",
-
-   
               html:`
               <!DOCTYPE html>
           
@@ -767,6 +768,6 @@ ${result[0].Customer[0].Mobile}
                 responseType.statusText ='error'
                 responseType.message = 'Email Id not Exit'; 
             }
-            res.json(responseType)
+            console.log("done");
    
 }

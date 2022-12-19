@@ -1,0 +1,73 @@
+const PickupDetails = require("../model/PickupDetails_model")
+const sendMail =  PickupDetails.aggregate([
+    {
+        $lookup:{   
+            from:'contents',
+            localField:'ContentId',
+            foreignField:'ContentId',
+            as:"contents"
+        }
+       
+    },
+    {
+        $lookup:{
+            from:'customers',
+            localField:'CustomerId',
+            foreignField:'CustomerId',
+            as:"Customer"
+        }
+    },
+    {
+        $lookup:{
+            from:'customers',
+            localField:'ConsignerId',
+            foreignField:'CustomerId',
+            as:"Consigner"
+        }
+    },
+    {
+        $lookup:{
+            from:'customers',
+            localField:'ConsigneeId',
+            foreignField:'CustomerId',
+            as:"Consignee"
+        }
+    },
+    {
+        $lookup:{
+            from:'cities',
+            localField:'OriginId',
+            foreignField:'Cityid',
+            as:"Origin"
+        }
+    },
+    {
+        $lookup:{
+            from:'cities',
+            localField:'DestinationId',
+            foreignField:'Cityid',
+            as:"Destination"
+        }
+    },
+    {
+        $lookup:{
+            from:'packagedetails',
+            localField:'RequestedId',
+            foreignField:'RequestedId',
+            as:"PackageDetails"
+        }
+    },
+    {
+        $lookup:{
+            from:'allocations',
+            localField:'RequestedId',
+            foreignField:'RequestedId',
+            as:"Allocation"
+        }
+    },
+    {
+        $match:{ReceiverEmail:"narwadegovind1@gmial.com"}
+        
+    }
+]) 
+console.log(sendMail.contents);
